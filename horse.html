@@ -22,31 +22,14 @@
     padding: 24px 0; border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border); margin: 24px 0;
   }
-  .detail-price-big {
-    font-family: var(--serif); font-size: 2.4rem;
-    font-weight: 300; color: var(--gold);
-  }
+  .detail-price-big { font-family: var(--serif); font-size: 2.4rem; font-weight: 300; color: var(--gold); }
   .detail-desc { color: var(--text-muted); line-height: 1.9; margin-bottom: 24px; }
   .inquiry-section { padding: 80px 0; background: var(--dark-2); }
-  .video-wrap {
-    position: relative;
-    background: var(--dark-3);
-    margin-top: 8px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-  }
-  .video-wrap video {
-    width: 100%; display: block;
-    max-height: 320px; object-fit: cover;
-  }
-  .video-wrap iframe {
-    width: 100%; aspect-ratio: 16/9; border: none; display: block;
-  }
+  .video-wrap { position: relative; background: var(--dark-3); margin-top: 8px; overflow: hidden; border: 1px solid var(--border); }
+  .video-wrap video { width: 100%; display: block; max-height: 320px; object-fit: cover; }
+  .video-wrap iframe { width: 100%; aspect-ratio: 16/9; border: none; display: block; }
   .videos-section { margin-top: 24px; }
-  .videos-label {
-    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-muted); margin-bottom: 10px;
-  }
+  .videos-label { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
   .videos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   @media(max-width:600px){ .videos-grid { grid-template-columns: 1fr; } }
 </style>
@@ -181,9 +164,9 @@ if (horse) {
       <div class="videos-grid">
         ${horse.videos.map(v => {
           if (v.includes('youtube.com') || v.includes('youtu.be')) {
-            return `<div class="video-wrap"><iframe src="${v}" allowfullscreen allow="autoplay; encrypted-media"></iframe></div>`;
+            return '<div class="video-wrap"><iframe src="' + v + '" allowfullscreen allow="autoplay; encrypted-media"></iframe></div>';
           }
-          return `<div class="video-wrap"><video controls playsinline preload="metadata"><source src="${v}">Your browser does not support video.</video></div>`;
+          return '<div class="video-wrap"><video controls playsinline preload="metadata"><source src="' + v + '">Your browser does not support video.</video></div>';
         }).join('')}
       </div>
     </div>
@@ -202,16 +185,13 @@ if (horse) {
         <p class="eyebrow">${horse.gender} · ${horse.color}</p>
         <h1 style="font-family:var(--serif);font-weight:300;color:var(--cream);font-size:clamp(2.4rem,5vw,4rem);margin-bottom:8px">${horse.name}</h1>
         <p style="font-family:var(--serif);font-style:italic;color:var(--text-muted);font-size:1.1rem;margin-bottom:16px">By ${horse.sire} out of ${horse.dam} (${horse.damSire})</p>
-
         <div class="detail-highlights">
-          ${horse.highlights.map(h => `<span class="highlight-tag">${h}</span>`).join('')}
+          ${horse.highlights.map(h => '<span class="highlight-tag">' + h + '</span>').join('')}
         </div>
-
         <div class="detail-price-bar">
           <span class="detail-price-big">${horse.price}</span>
           <a href="#" onclick="document.querySelector('.inquiry-section').scrollIntoView({behavior:'smooth'});return false;" class="btn-primary">Inquire About This Horse</a>
         </div>
-
         <table class="detail-table">
           <tr><td>Foaled</td><td>${horse.foaled}</td></tr>
           <tr><td>Gender</td><td>${horse.gender}</td></tr>
@@ -222,15 +202,12 @@ if (horse) {
           <tr><td>Location</td><td>${horse.location}</td></tr>
           <tr><td>Status</td><td style="color:var(--gold)">${horse.status === 'available' ? 'Available now' : 'Sold'}</td></tr>
         </table>
-
         <p class="detail-desc">${horse.description}</p>
       </div>
     </div>
   `;
 } else {
-  document.getElementById('detailContent').innerHTML += `
-    <p style="color:var(--text-muted)">Horse not found. <a href="index.html" style="color:var(--gold)">Return to listings →</a></p>
-  `;
+  document.getElementById('detailContent').innerHTML += '<p style="color:var(--text-muted)">Horse not found. <a href="index.html" style="color:var(--gold)">Return to listings →</a></p>';
 }
 
 function switchImg(thumb, src) {
