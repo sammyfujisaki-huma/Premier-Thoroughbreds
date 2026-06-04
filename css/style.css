@@ -1091,3 +1091,31 @@ p { color: var(--text-muted); line-height: 1.8; }
 
   .hero-actions { flex-direction: column; align-items: flex-start; }
 }
+
+/* ---- LANGUAGE TOGGLE ---- */
+.lang-toggle {
+  padding: 7px 16px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.lang-toggle:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.mobile-lang {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-lang { display: block; }
+  /* hide desktop lang toggle on mobile since it's inside nav-links which is hidden */
+}

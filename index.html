@@ -20,19 +20,23 @@
       <span class="logo-sub">USA</span>
     </a>
     <div class="nav-links">
-      <a href="index.html#horses">Our Horses</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="index.html#contact" class="nav-cta">Inquire Now</a>
+      <a href="index.html#horses" data-i18n="nav_horses">Our Horses</a>
+      <a href="index.html#about" data-i18n="nav_about">About</a>
+      <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+      <a href="index.html#contact" class="nav-cta" data-i18n="nav_cta">Inquire Now</a>
+      <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()">日本語</button>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <button class="lang-toggle mobile-lang" id="langToggleMobile" onclick="toggleLanguage()">日本語</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html#horses">Our Horses</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="index.html#horses" data-i18n="nav_horses">Our Horses</a>
+    <a href="index.html#about" data-i18n="nav_about">About</a>
+    <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
   </div>
 </nav>
 
@@ -42,12 +46,12 @@
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-content">
-    <p class="hero-eyebrow">American Thoroughbreds · Est. in Excellence</p>
-    <h1 class="hero-title">Where Champions<br><em>Begin Their Legacy</em></h1>
-    <p class="hero-sub">Exceptional race horses and proven breeding stock sourced from the finest farms in Kentucky, Florida, and California. Available to buyers worldwide.</p>
+    <p class="hero-eyebrow" data-i18n="hero_eyebrow">American Thoroughbreds · Est. in Excellence</p>
+    <h1 class="hero-title" data-i18n="hero_title">Where Champions<br><em>Begin Their Legacy</em></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Exceptional race horses and proven breeding stock sourced from the finest farms in Kentucky, Florida, and California. Available to buyers worldwide.</p>
     <div class="hero-actions">
-      <a href="#horses" class="btn-primary">View Available Horses</a>
-      <a href="#contact" class="btn-ghost">Speak With Us</a>
+      <a href="#horses" class="btn-primary" data-i18n="hero_btn1">View Available Horses</a>
+      <a href="#contact" class="btn-ghost" data-i18n="hero_btn2">Speak With Us</a>
     </div>
   </div>
   <div class="hero-scroll">
@@ -57,28 +61,40 @@
 </section>
 
 <div class="stats-bar">
-  <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Horses Sold</span></div>
+  <div class="stat">
+    <span class="stat-num" data-i18n="stat1_num">50+</span>
+    <span class="stat-label" data-i18n="stat1_label">Horses Sold</span>
+  </div>
   <div class="stat-div"></div>
-  <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Countries Served</span></div>
+  <div class="stat">
+    <span class="stat-num" data-i18n="stat2_num">12+</span>
+    <span class="stat-label" data-i18n="stat2_label">Countries Served</span>
+  </div>
   <div class="stat-div"></div>
-  <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Verified Bloodlines</span></div>
+  <div class="stat">
+    <span class="stat-num" data-i18n="stat3_num">100%</span>
+    <span class="stat-label" data-i18n="stat3_label">Verified Bloodlines</span>
+  </div>
   <div class="stat-div"></div>
-  <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Buyer Support</span></div>
+  <div class="stat">
+    <span class="stat-num" data-i18n="stat4_num">24/7</span>
+    <span class="stat-label" data-i18n="stat4_label">Buyer Support</span>
+  </div>
 </div>
 
 <section class="section" id="horses">
   <div class="container">
     <div class="section-header">
-      <p class="eyebrow">Currently Available</p>
-      <h2 class="section-title">Our Thoroughbreds</h2>
-      <p class="section-sub">Each horse is individually evaluated, vetted, and represented with full transparency on bloodlines, race record, and health history.</p>
+      <p class="eyebrow" data-i18n="horses_eyebrow">Currently Available</p>
+      <h2 class="section-title" data-i18n="horses_title">Our Thoroughbreds</h2>
+      <p class="section-sub" data-i18n="horses_sub">Each horse is individually evaluated, vetted, and represented with full transparency on bloodlines, race record, and health history.</p>
     </div>
     <div class="filters">
-      <button class="filter-btn active" data-filter="all">All Horses</button>
-      <button class="filter-btn" data-filter="Stallion">Stallions</button>
-      <button class="filter-btn" data-filter="Filly">Fillies</button>
-      <button class="filter-btn" data-filter="Gelding">Geldings</button>
-      <button class="filter-btn" data-filter="Colt">Colts</button>
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Horses</button>
+      <button class="filter-btn" data-filter="Stallion" data-i18n="filter_stallion">Stallions</button>
+      <button class="filter-btn" data-filter="Filly" data-i18n="filter_filly">Fillies</button>
+      <button class="filter-btn" data-filter="Gelding" data-i18n="filter_gelding">Geldings</button>
+      <button class="filter-btn" data-filter="Colt" data-i18n="filter_colt">Colts</button>
     </div>
     <div class="horses-grid" id="horsesGrid"></div>
   </div>
@@ -89,22 +105,22 @@
     <div class="about-img-wrap">
       <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80" alt="Horse training" class="about-img">
       <div class="about-badge">
-        <span class="badge-num">15+</span>
-        <span class="badge-label">Years of Experience</span>
+        <span class="badge-num" data-i18n="about_badge_num">15+</span>
+        <span class="badge-label" data-i18n="about_badge_label">Years of Experience</span>
       </div>
     </div>
     <div class="about-text">
-      <p class="eyebrow">Why Us</p>
-      <h2 class="section-title">Trusted by Buyers<br><em>Around the World</em></h2>
-      <p>We specialize in connecting international buyers with the finest American thoroughbreds. Every horse we represent has been personally evaluated for soundness, temperament, and potential.</p>
+      <p class="eyebrow" data-i18n="about_eyebrow">Why Us</p>
+      <h2 class="section-title" data-i18n="about_title">Trusted by Buyers<br><em>Around the World</em></h2>
+      <p data-i18n="about_body">We specialize in connecting international buyers with the finest American thoroughbreds.</p>
       <ul class="about-list">
-        <li><span class="check">✦</span> Full veterinary records and pre-purchase exam support</li>
-        <li><span class="check">✦</span> Verified bloodlines with Jockey Club registration</li>
-        <li><span class="check">✦</span> Export assistance and international shipping coordination</li>
-        <li><span class="check">✦</span> Video walkthroughs and live video calls available</li>
-        <li><span class="check">✦</span> Post-sale support and follow-up</li>
+        <li><span class="check">✦</span> <span data-i18n="about_li1">Full veterinary records and pre-purchase exam support</span></li>
+        <li><span class="check">✦</span> <span data-i18n="about_li2">Verified bloodlines with Jockey Club registration</span></li>
+        <li><span class="check">✦</span> <span data-i18n="about_li3">Export assistance and international shipping coordination</span></li>
+        <li><span class="check">✦</span> <span data-i18n="about_li4">Video walkthroughs and live video calls available</span></li>
+        <li><span class="check">✦</span> <span data-i18n="about_li5">Post-sale support and follow-up</span></li>
       </ul>
-      <a href="#contact" class="btn-primary">Get In Touch</a>
+      <a href="#contact" class="btn-primary" data-i18n="about_btn">Get In Touch</a>
     </div>
   </div>
 </section>
@@ -112,29 +128,29 @@
 <section class="section" id="testimonials">
   <div class="container">
     <div class="section-header">
-      <p class="eyebrow">From Our Buyers</p>
-      <h2 class="section-title">Stories of Success</h2>
+      <p class="eyebrow" data-i18n="test_eyebrow">From Our Buyers</p>
+      <h2 class="section-title" data-i18n="test_title">Stories of Success</h2>
     </div>
     <div class="testimonials-grid">
       <div class="testimonial">
-        <p class="t-quote">"The entire process was seamless. From the first inquiry to the horse arriving at our stable in Japan, everything was handled professionally. Our filly won her debut three months later."</p>
+        <p class="t-quote" data-i18n="test1_quote">"The entire process was seamless..."</p>
         <div class="t-author">
           <div class="t-avatar">KT</div>
-          <div><strong>Kenji Tanaka</strong><p>Racing Stables, Tokyo</p></div>
+          <div><strong data-i18n="test1_name">Kenji Tanaka</strong><p data-i18n="test1_org">Racing Stables, Tokyo</p></div>
         </div>
       </div>
       <div class="testimonial">
-        <p class="t-quote">"We've purchased three horses through Premier Thoroughbreds. The bloodline documentation, vet history, and export coordination were all handled for us. Exceptional service."</p>
+        <p class="t-quote" data-i18n="test2_quote">"We've purchased three horses..."</p>
         <div class="t-author">
           <div class="t-avatar">AS</div>
-          <div><strong>Ahmed Al-Sayed</strong><p>Equestrian Club, Dubai</p></div>
+          <div><strong data-i18n="test2_name">Ahmed Al-Sayed</strong><p data-i18n="test2_org">Equestrian Club, Dubai</p></div>
         </div>
       </div>
       <div class="testimonial">
-        <p class="t-quote">"The horse arrived in perfect condition and exceeded all expectations. Premier Thoroughbreds made the entire international purchase effortless."</p>
+        <p class="t-quote" data-i18n="test3_quote">"The horse arrived in perfect condition..."</p>
         <div class="t-author">
           <div class="t-avatar">MC</div>
-          <div><strong>Marco Castellano</strong><p>Scuderia Equestre, Italy</p></div>
+          <div><strong data-i18n="test3_name">Marco Castellano</strong><p data-i18n="test3_org">Scuderia Equestre, Italy</p></div>
         </div>
       </div>
     </div>
@@ -144,13 +160,13 @@
 <section class="section section-dark" id="contact">
   <div class="container contact-grid">
     <div class="contact-text">
-      <p class="eyebrow">Get In Touch</p>
-      <h2 class="section-title">Interested in a Horse?</h2>
-      <p>Fill out the form and we'll be in touch within 24 hours. For urgent inquiries, WhatsApp us directly.</p>
+      <p class="eyebrow" data-i18n="contact_eyebrow">Get In Touch</p>
+      <h2 class="section-title" data-i18n="contact_title">Interested in a Horse?</h2>
+      <p data-i18n="contact_body">Fill out the form and we'll be in touch within 24 hours.</p>
       <div class="contact-details">
         <div class="contact-item"><span class="c-icon">✉</span><span>contact@premierthoroughbreds.com</span></div>
         <div class="contact-item"><span class="c-icon">📱</span><span>WhatsApp: +1 (555) 000-0000</span></div>
-        <div class="contact-item"><span class="c-icon">📍</span><span>Lexington, Kentucky, USA</span></div>
+        <div class="contact-item"><span class="c-icon">📍</span><span data-i18n="contact_location">Lexington, Kentucky, USA</span></div>
       </div>
       <div class="social-links">
         <a href="#" class="social-link" aria-label="Instagram">
@@ -167,71 +183,67 @@
     <form class="contact-form" id="contactForm">
       <div class="form-row">
         <div class="form-group">
-          <label for="name">Your Name *</label>
-          <input type="text" id="name" name="name" required placeholder="Full name">
+          <label for="name" data-i18n-label="form_name">Your Name *</label>
+          <input type="text" id="name" name="name" required data-i18n="form_name_ph" placeholder="Full name">
         </div>
         <div class="form-group">
-          <label for="email">Email Address *</label>
+          <label for="email" data-i18n-label="form_email">Email Address *</label>
           <input type="email" id="email" name="email" required placeholder="your@email.com">
         </div>
       </div>
       <div class="form-group">
-        <label for="country">Country</label>
-        <input type="text" id="country" name="country" placeholder="Your country">
+        <label for="country" data-i18n-label="form_country">Country</label>
+        <input type="text" id="country" name="country" data-i18n="form_country_ph" placeholder="Your country">
       </div>
       <div class="form-group">
-        <label for="horse">Horse of Interest</label>
+        <label data-i18n-label="form_horse">Horse of Interest</label>
         <select id="horse" name="horse">
-          <option value="">— Select a horse (optional) —</option>
+          <option value="" data-i18n="form_horse_default">— Select a horse (optional) —</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="budget">Budget Range</label>
+        <label for="budget" data-i18n-label="form_budget">Budget Range</label>
         <select id="budget" name="budget">
-          <option value="">— Select range —</option>
-          <option>Under $50,000</option>
-          <option>$50,000 – $100,000</option>
-          <option>$100,000 – $250,000</option>
-          <option>$250,000+</option>
-          <option>Open / Flexible</option>
+          <option value="" data-i18n="form_budget_default">— Select range —</option>
+          <option data-i18n="form_budget_1">Under $50,000</option>
+          <option data-i18n="form_budget_2">$50,000 – $100,000</option>
+          <option data-i18n="form_budget_3">$100,000 – $250,000</option>
+          <option data-i18n="form_budget_4">$250,000+</option>
+          <option data-i18n="form_budget_5">Open / Flexible</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Tell us what you're looking for..."></textarea>
+        <label for="message" data-i18n-label="form_message">Message</label>
+        <textarea id="message" name="message" rows="4" data-i18n="form_message_ph" placeholder="Tell us what you're looking for..."></textarea>
       </div>
       <div class="form-group checkbox-group">
         <label class="checkbox-label">
-          <input type="checkbox" name="video_call"> I'd like to schedule a video call / live walkthrough
+          <input type="checkbox" name="video_call"> <span data-i18n="form_video">I'd like to schedule a video call / live walkthrough</span>
         </label>
       </div>
       <button type="submit" class="btn-primary btn-full" id="submitBtn">
-        <span id="btnText">Send Inquiry</span>
+        <span id="btnText" data-i18n="form_submit">Send Inquiry</span>
       </button>
-      <p class="form-note">We respond within 24 hours. Your information is never shared.</p>
-      <div class="form-success" id="formSuccess">
-        <span>✦</span> Thank you! We've received your inquiry and will be in touch shortly.
-      </div>
+      <p class="form-note" data-i18n="form_note">We respond within 24 hours. Your information is never shared.</p>
+      <div class="form-success" id="formSuccess"></div>
     </form>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container footer-inner">
-    <div class="footer-logo">
-      <span class="logo-mark">✦</span>
-      <span>Premier Thoroughbreds USA</span>
-    </div>
-    <p class="footer-copy">© 2025 Premier Thoroughbreds USA. All horses subject to prior sale.</p>
+    <div class="footer-logo"><span class="logo-mark">✦</span><span>Premier Thoroughbreds USA</span></div>
+    <p class="footer-copy" data-i18n="footer_copy">© 2025 Premier Thoroughbreds USA. All horses subject to prior sale.</p>
     <div class="footer-links">
-      <a href="#horses">Horses</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#horses" data-i18n="nav_horses">Horses</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
     </div>
   </div>
 </footer>
 
 <script src="js/horses.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
